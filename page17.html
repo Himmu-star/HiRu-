@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whatsapp Style Love Form</title>
+  <style>
+    /* ... [Your existing CSS - unchanged] ... */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ece5dd;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .chat-box {
+      width: 95%;
+      max-width: 480px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+    }
+    .chat-header {
+      background-color: #075e54;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+    }
+    .chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .msg {
+      max-width: 75%;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    .msg.user {
+      background-color: #dcf8c6;
+      align-self: flex-end;
+    }
+    .msg.bot {
+      background-color: #f1f0f0;
+      align-self: flex-start;
+    }
+    .chat-input {
+      padding: 15px;
+      border-top: 1px solid #ccc;
+      background-color: #f0f0f0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"], textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #25d366;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #1ebd58;
+    }
+    .surprise-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #d4006a;
+    }
+    .video-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .video-buttons a {
+      background-color: #ff4b91;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .video-buttons a:hover {
+      background-color: #e03d7b;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-box">
+    <div class="chat-header">Ruhi 🥰</div>
+    <div class="chat-body">
+      <div class="msg bot">Hi Ruhi! 💌 Aaj hum tumse kuchh pyare sawaal puchhna chahte hain 💖</div>
+      <div class="msg user">Ok Rishu 😚</div>
+      <div class="msg bot">Please fill in these 🥰</div>
+
+      <form id="loveForm">
+        <label>Mujhe aap kya bulaate ho? (Nickname)</label>
+        <input type="text" name="nickname" required />
+
+        <label>Hamari pehli mulaqat ka kaisa laga tha? 💞</label>
+        <textarea name="first_meet" rows="2" required></textarea>
+
+        <label>Hamari favourite yaad?</label>
+        <textarea name="fav_memory" rows="2" required></textarea>
+
+        <label>Aapka sapna hum dono ke liye?</label>
+        <textarea name="dream" rows="2" required></textarea>
+
+        <label>Koi ek secret ya confession jo aap sirf humse share karna chahti ho?</label>
+        <textarea name="confession" rows="2" required></textarea>
+
+        <label>Kya aapko humse jealous feel hota hai kabhi? Kis baat pe? 😜</label>
+        <textarea name="jealous" rows="2"></textarea>
+
+        <label>Jab hum gussa karte hain to aapka kya reaction hota hai? 😤➡️😇</label>
+        <textarea name="anger_reaction" rows="2"></textarea>
+
+        <label>Aapke hisaab se sabse cute moment hamara kaunsa tha? 🥺</label>
+        <textarea name="cute_moment" rows="2"></textarea>
+
+        <label>Hum dono ka sabse romantic moment kaunsa laga? ❤️‍🔥</label>
+        <textarea name="romantic_moment" rows="2"></textarea>
+
+        <label>Ek movie scene jisme aapko lagta hai ki hum dono fit baithte hai 🎬</label>
+        <textarea name="movie_scene" rows="2"></textarea>
+
+        <label>Hum dono ka future kaisa dekhte ho? 👩‍❤️‍👨</label>
+        <textarea name="future" rows="2"></textarea>
+
+        <label>Aapko humme kya sabse jyada pasand hai? 🥰</label>
+        <textarea name="fav_about_me" rows="2"></textarea>
+
+        <label>Ek line jo aap humse hamesha kehna chahogi ❤️</label>
+        <textarea name="one_line" rows="2"></textarea>
+
+        <button type="submit">Rishu ko bhej do 💌</button>
+      </form>
+
+      <div class="surprise-text">Surprise End 💖 I Love You So Much Ruhi 💕</div>
+
+      <div class="video-buttons">
+        <a href="https://youtu.be/wsflx5Zr5p4?si=C7zp2mBo3fsNG6Y-">🎥 Surprise Video 1</a>
+        <a href="https://youtu.be/sTaEwwHOzjc?si=ouAtdiu9DZ0vQblf" target="_blank">🎁 Surprise Video 2</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loveForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const data = new FormData(form);
+      let message = "💖 *Ruhi's Special Replies* 💖%0A";
+
+      for (const [key, value] of data.entries()) {
+        if (value.trim() !== "") {
+          const label = form.querySelector(`[name="${key}"]`).previousElementSibling.textContent;
+          message += `%0A*${label}*%0A${value}%0A`;
+        }
+      }
+
+      const phoneNumber = "+917061570522"; // 👉 Replace with your WhatsApp number (no +)
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Kiss 💋</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #ffdee9, #fff1eb);
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: #d9006c;
+    }
+
+    h1 {
+      margin-top: 80px;
+      font-size: 3em;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff1493, 0 0 20px #ff69b4, 0 0 30px #ff1493;
+      }
+      to {
+        text-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493, 0 0 40px #ff69b4;
+      }
+    }
+
+    .kiss {
+      width: 120px;
+      height: 120px;
+      background: url('https://cdn-icons-png.flaticon.com/512/2589/2589175.png') no-repeat center/contain;
+      margin: 0 auto;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .kiss:active {
+      animation: kissPop 0.5s ease;
+    }
+
+    @keyframes kissPop {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.4);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .next-button {
+      margin-top: 60px;
+      background: #ff69b4;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .next-button:hover {
+      background: #d9006c;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💋 Tap to Kiss 💋</h1>
+  <p>Jab bhi yaad aayenge, ek digital kiss bhej dena 💞</p>
+  <div class="kiss" id="kissBtn"></div>
+
+  <button class="next-button" onclick="goToNext()">Next Page</button>
+
+  <canvas id="hearts"></canvas>
+
+  <audio id="kissSound" src="kiss.mp3"></audio>
+
+  <script>
+    const canvas = document.getElementById('hearts');
+    const ctx = canvas.getContext('2d');
+    const kiss = document.getElementById('kissBtn');
+    const sound = document.getElementById('kissSound');
+    let width, height;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    const hearts = [];
+
+    function createHeart(x, y) {
+      hearts.push({
+        x,
+        y,
+        size: Math.random() * 20 + 10,
+        alpha: 1,
+        dx: (Math.random() - 0.5) * 2,
+        dy: Math.random() * -2 - 1
+      });
+    }
+
+    function drawHearts() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < hearts.length; i++) {
+        const h = hearts[i];
+        ctx.globalAlpha = h.alpha;
+        ctx.fillStyle = '#ff69b4';
+        ctx.beginPath();
+        ctx.moveTo(h.x, h.y);
+        ctx.bezierCurveTo(h.x - h.size / 2, h.y - h.size / 2, h.x - h.size, h.y + h.size / 3, h.x, h.y + h.size);
+        ctx.bezierCurveTo(h.x + h.size, h.y + h.size / 3, h.x + h.size / 2, h.y - h.size / 2, h.x, h.y);
+        ctx.fill();
+        ctx.globalAlpha = 1;
+
+        h.x += h.dx;
+        h.y += h.dy;
+        h.alpha -= 0.01;
+
+        if (h.alpha <= 0) {
+          hearts.splice(i, 1);
+          i--;
+        }
+      }
+      requestAnimationFrame(drawHearts);
+    }
+
+    drawHearts();
+
+    kiss.addEventListener('click', e => {
+      for (let i = 0; i < 15; i++) {
+        createHeart(e.clientX, e.clientY);
+      }
+      sound.currentTime = 0;
+      sound.play();
+    });
+
+    function goToNext() {
+      window.location.href = "page15.html"; // Replace with your actual next page
+    }
+  </script>
+
+</body>
+</html>

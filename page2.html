@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HiRu Love Journey</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom, #fdeff9, #ec38bc);
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .container {
+      padding: 3rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 2s ease forwards;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-top: 1rem;
+      animation: fadeIn 3s ease forwards;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .petals {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .petal {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-image: url('https://pngimg.com/uploads/rose/rose_PNG66807.png');
+      background-size: cover;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .back-button {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      color: #ec38bc;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background-color: #fddde6;
+      transform: translateX(-50%) scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HiRu Love Journey</h1>
+    <p>
+      Yeh page un haseen lamhon ko yaad karta hai jahan humne apna pyaar jeeya — sirf <strong>13 November 2023</strong> se <strong>25 June 2024</strong> tak ki yaadein.
+    </p>
+    <p>
+      Un dino ka rang, vo muskan, vo chhoti chhoti baatein... sab kuch yahaan likha jaayega. Yeh sirf ek shuruaat hai. Tumhara Rishu tumse waada karta hai ki ek ek page par tumhaare naam ki yaadon ki mehekti garden hogi.
+    </p>
+  </div>
+
+  <div class="petals">
+    <!-- Generate petals -->
+    <script>
+      const petalsContainer = document.querySelector('.petals');
+      for (let i = 0; i < 25; i++) {
+        const petal = document.createElement('div');
+        petal.classList.add('petal');
+        petal.style.left = Math.random() * 100 + 'vw';
+        petal.style.animationDuration = 5 + Math.random() * 5 + 's';
+        petal.style.animationDelay = Math.random() * 5 + 's';
+        petalsContainer.appendChild(petal);
+      }
+    </script>
+  </div>
+
+  <button class="back-button" onclick="location.href='page3.html'">Next Chapter 🌸</button>
+</body>
+</html>

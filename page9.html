@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicknames She Calls Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right top, #ffe4ec, #fff1f7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #d63384;
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 4px solid #ff69b4;
+      padding-bottom: 10px;
+    }
+
+    .nickname-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 900px;
+    }
+
+    .nickname {
+      background-color: #fff;
+      color: #d63384;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+      animation: bounce 2s infinite ease-in-out;
+      cursor: default;
+    }
+
+    .nickname:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+
+    .nickname:nth-child(odd) {
+      animation-delay: 0.5s;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .next-btn {
+      margin-top: 40px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #e60073;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Nicknames She Calls Me 💖</h1>
+
+  <div class="nickname-grid">
+    <div class="nickname">Rishu 💕</div>
+    <div class="nickname">Sona ❣️</div>
+    <div class="nickname">Babu 😘</div>
+    <div class="nickname">Buggu 🥰</div>
+    <div class="nickname">Bachcha 😇</div>
+    <div class="nickname">Baby 💓</div>
+    <div class="nickname">Bubu 😊</div>
+    <div class="nickname">Betu 😗</div>
+    <div class="nickname">Jaan ❤️</div>
+    <div class="nickname">Sweet heart 💓</div>
+    <div class="nickname">Love 😘</div>
+    <div class="nickname">Cutoo 🥰</div>
+    <div class="nickname">Bestestestest friend 💕</div>
+    <div class="nickname">Life 🧬</div>
+    <div class="nickname">Sweetu 😘</div>
+    <div class="nickname">Bandar 😁</div>
+    <div class="nickname">Ullu 😁</div>
+    <div class="nickname">Chuchhunar 😆</div>
+    <div class="nickname">Banar 😘</div>
+    <div class="nickname">Baklol 😂</div>
+    <div class="nickname">Buddhu 😇</div>
+    <div class="nickname">Sir ji 🥰</div>
+  </div>
+
+  <button class="next-btn" onclick="goToNext()">❤️ Final Surprise ❤️</button>
+
+  <script>
+    function goToNext() {
+      // Replace with your next page link
+      window.location.href = "page10.html";
+    }
+  </script>
+</body>
+</html>

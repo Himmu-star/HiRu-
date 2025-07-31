@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Things She Doesn't Like 💔</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to right bottom, #ffe4e6, #fecdd3, #fda4af);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #9d174d;
+      margin-bottom: 30px;
+      border-bottom: 4px solid #ec4899;
+      padding-bottom: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1000px;
+    }
+
+    .card {
+      background-color: #fff;
+      color: #9d174d;
+      padding: 20px 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(249, 168, 212, 0.5);
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: center;
+      min-width: 220px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(219, 39, 119, 0.6);
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      top: -15px;
+      right: -15px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .navigation {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-btn {
+      background-color: #be185d;
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: #9d174d;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        min-width: 150px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Things She Doesn't Like 💔</h1>
+
+  <div class="container">
+    <div class="card">Sunkhet <span class="emoji">🙅‍♀️</span></div>
+    <div class="card">Savere uthna <span class="emoji">😴</span></div>
+    <div class="card">Chup rahna <span class="emoji">🤐</span></div>
+    <div class="card">Family ke bare me kuch galat <span class="emoji">😡</span></div>
+  </div>
+
+  <div class="navigation">
+    <button class="nav-btn" onclick="goTo('page6.html')">⬅️ Back</button>
+    <button class="nav-btn" onclick="goTo('page8.html')">Next ➡️</button>
+  </div>
+
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Things I Love About Her</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe0ec, #ffb3c6);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #b30059;
+      margin: 2rem 1rem 1rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff0f6;
+      color: #660033;
+      padding: 20px;
+      width: 280px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: contain;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0);
+      }
+      100% {
+        transform: translateY(-10vh) translateX(30vw);
+      }
+    }
+
+    .buttons {
+      text-align: center;
+      margin: 40px 0 60px;
+    }
+
+    .buttons button {
+      background-color: #ff66a3;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      margin: 0 15px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .buttons button:hover {
+      background-color: #e60073;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Things I Love About Her 💖</h1>
+  <div class="container">
+    <div class="card">Trust to me 💝 and family ❤️</div>
+    <div class="card">Loyal 😉</div>
+    <div class="card">Always pamper me and mera sara mood swings handle karti hai 😆</div>
+    <div class="card">Mera chhota chhota chij notice karna</div>
+    <div class="card">Cuteness 😍</div>
+    <div class="card">Pretty 😍</div>
+    <div class="card">Listen my all bakwash</div>
+    <div class="card">Bache jaise lips and everything</div>
+    <div class="card">Cute expressions 🥰</div>
+    <div class="card">Cute chubby cheeks 🤩</div>
+    <div class="card">Smile 😊</div>
+    <div class="card">Always ready to say sorry without any mistake</div>
+    <div class="card">Can do anything for me</div>
+    <div class="card">0 ego</div>
+    <div class="card">Mere samne bache jaise rahna</div>
+    <div class="card">Gussa karna</div>
+    <div class="card">Hairs when open</div>
+    <div class="card">Everything about her 💕</div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="goBack()">⬅️ Back</button>
+    <button onclick="goNext()">Next ➡️</button>
+  </div>
+
+  <script>
+    // Floating hearts
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(heart);
+    }
+
+    // Navigation handlers
+    function goBack() {
+      window.location.href = "page7.html"; // Replace with your previous page path
+    }
+
+    function goNext() {
+      window.location.href = "page9.html"; // Replace with your next page path
+    }
+  </script>
+</body>
+</html>

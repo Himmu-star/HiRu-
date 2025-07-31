@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicknames I Call Her</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .nickname-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .nickname {
+      background: #ffffffaa;
+      padding: 15px 25px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      animation: floatHeart 4s infinite ease-in-out;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 18px;
+      animation: flyHeart 3s ease-in-out infinite;
+    }
+
+    @keyframes flyHeart {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
+    }
+
+    @keyframes floatHeart {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .next-button {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff5e78;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #e44663;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nickname I call her 💕</h1>
+
+  <div class="nickname-container">
+    <div class="nickname">Ruhi 💕 <span class="heart">💖</span></div>
+    <div class="nickname">Sona ❣️ <span class="heart">💗</span></div>
+    <div class="nickname">Babu 😘 <span class="heart">💘</span></div>
+    <div class="nickname">Buggu 🥰 <span class="heart">💞</span></div>
+    <div class="nickname">Bachcha 😇 <span class="heart">💕</span></div>
+    <div class="nickname">Baby 💓 <span class="heart">💝</span></div>
+    <div class="nickname">Bubu 😊 <span class="heart">💖</span></div>
+    <div class="nickname">Betu 😗 <span class="heart">💗</span></div>
+    <div class="nickname">Jaan ❤️ <span class="heart">💘</span></div>
+    <div class="nickname">Sweet heart 💓 <span class="heart">💞</span></div>
+    <div class="nickname">Love 😘 <span class="heart">💕</span></div>
+    <div class="nickname">Cutie pie 🥰 <span class="heart">💝</span></div>
+    <div class="nickname">Bestestestest friend 💕 <span class="heart">💖</span></div>
+    <div class="nickname">Life 🧬 <span class="heart">💗</span></div>
+    <div class="nickname">Sweetie 😘 <span class="heart">💘</span></div>
+    <div class="nickname">Motki 😘 <span class="heart">💞</span></div>
+    <div class="nickname">Bandar 😁 <span class="heart">💕</span></div>
+    <div class="nickname">Ullu 😁 <span class="heart">💝</span></div>
+    <div class="nickname">Chuchhunar 😆 <span class="heart">💖</span></div>
+    <div class="nickname">Banar 😘 <span class="heart">💗</span></div>
+    <div class="nickname">Baklol 😂 <span class="heart">💘</span></div>
+    <div class="nickname">Buddhu 😇 <span class="heart">💞</span></div>
+    <div class="nickname">Rani 🥰 <span class="heart">💕</span></div>
+  </div>
+
+  <button class="next-button" onclick="goToNextPage()">Next ➡️</button>
+
+  <script>
+    function goToNextPage() {
+      window.location.href = "./page11.html"; // Replace with actual next page URL
+    }
+  </script>
+
+</body>
+</html>

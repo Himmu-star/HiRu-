@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Timeline - HiRu LoveVerse</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffe6f0, #ffe0ec);
+      color: #5a0033;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #ff66a3;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .container.left {
+      left: 0;
+    }
+
+    .container.right {
+      left: 50%;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: #fff0f5;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .date {
+      font-weight: bold;
+      color: #cc0052;
+      margin-bottom: 0.5rem;
+    }
+
+    .container::before {
+      content: " ";
+      position: absolute;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ff3399;
+      border: 4px solid #fff0f5;
+      z-index: 1;
+    }
+
+    .left::before {
+      right: -10px;
+    }
+
+    .right::before {
+      left: -10px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .next-btn {
+      padding: 12px 24px;
+      background-color: #ff3399;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .next-btn:hover {
+      background-color: #e60073;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .container.right {
+        left: 0%;
+      }
+
+      .timeline::after {
+        left: 30px;
+      }
+
+      .container::before {
+        left: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Our Love Journey ❤️</h1>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <div class="date">13 November 2022</div>
+        <p>First time I saw you in college during diploma. Love at first sight 💘</p>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="date">18 December 2022</div>
+        <p>Messaged you for the first time after lots of jugaad 😅</p>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="date">23 December 2022</div>
+        <p>Got your first reply 🥰</p>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="date">28 March 2023</div>
+        <p>You called for the first time, nervously 💕</p>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="date">24 April 2023</div>
+        <p>Our first long late-night call 🌙✨</p>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="date">2 August 2023</div>
+        <p>Our first date 💖</p>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="date">25 June 2024</div>
+        <p>Our most special day – First kiss 💋❤️</p>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="date">Now</div>
+        <p>We'll cherish all moments like from 13 Nov 2022 to 25 June 2024 forever 💞</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <a href="page4.html" class="next-btn">Next ➡️</a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Chat Simulator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f2f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .chat-box {
+      width: 350px;
+      height: 600px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .header {
+      background-color: #ff80ab;
+      color: white;
+      padding: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .sent {
+      align-self: flex-end;
+      background-color: #dcf8c6;
+    }
+
+    .received {
+      align-self: flex-start;
+      background-color: #f1f0f0;
+    }
+
+    .button-box {
+      padding: 15px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f50057;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-box">
+    <div class="header">❤️ Love Chat ❤️</div>
+    <div class="messages" id="chatMessages">
+      <div class="message sent">Hey Sona, I love you ❤️</div>
+    </div>
+    <div class="button-box">
+      <button id="chatButton" onclick="sendNextMessage()">Send Message</button>
+    </div>
+  </div>
+
+  <script>
+    const messages = [
+      { type: 'received', text: 'Awww Rishu, I love you too 😘 Tumhara pyaar mere liye sabse khaas hai.' },
+      { type: 'sent', text: 'Tum meri zindagi ka sabse pyaara hissa ho 💕 Tumhare bina sab adhoora lagta hai.' },
+      { type: 'received', text: 'Aapki har ek baat dil ko choo jaati hai, aur har din main aur zyada pyaar mein padti hoon 😍' },
+      { type: 'sent', text: 'Main chhoti chhoti baatein bhi tumse share karna chahta hoon, kyunki tum meri duniya ho ☺️' },
+      { type: 'received', text: 'Tumhare saath rehna, baat karna, muskurana... sab kuch perfect lagta hai 💖' },
+      { type: 'sent', text: 'Main promise karta hoon ki har lamha tumhara khayal rakhunga, aur kabhi tumse door nahi jaunga ❤️' },
+      { type: 'received', text: 'Aur main bhi vaada karti hoon ki har khushi aur dukh mein tumhare saath rahungi, hamesha 😇' },
+    ];
+
+    let index = 0;
+    function sendNextMessage() {
+      if (index < messages.length) {
+        const chat = document.getElementById('chatMessages');
+        const msg = document.createElement('div');
+        msg.className = 'message ' + messages[index].type;
+        msg.innerText = messages[index].text;
+        chat.appendChild(msg);
+        chat.scrollTop = chat.scrollHeight;
+        index++;
+
+        if (index === messages.length) {
+          const btn = document.getElementById('chatButton');
+          btn.innerText = 'Next Page';
+          btn.onclick = () => {
+            window.location.href = "page17.html"; // Replace with actual next page
+          };
+        }
+      }
+    }
+  </script>
+</body>
+</html>
